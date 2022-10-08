@@ -6,7 +6,11 @@ export const Container = styled.div`
 	flex-direction: column;
 `;
 
+export const BarberInfoContainer = styled.div``;
+
 export const BarberInfo = styled.div``;
+
+export const BarberFigure = styled.figure``;
 
 export const SocialMediasContainer = styled.div`
 	display: flex;

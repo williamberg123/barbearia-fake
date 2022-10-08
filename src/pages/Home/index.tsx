@@ -1,11 +1,28 @@
-import { Container, SocialMedia, SocialMediasContainer } from './styles';
+import { BarberFigure, BarberInfo, BarberInfoContainer, Container, SocialMedia, SocialMediasContainer } from './styles';
 import instagramIcon from '../../assets/instagram.png';
 import whatsappIcon from '../../assets/whatsapp.png';
+import barberPole from '../../assets/barber.png';
 
 export default function Home() {
 	return (
 		<Container>
-			<h1>Home</h1>
+			<BarberInfoContainer>
+				<BarberInfo>
+					<span>
+						BARBEARIA BERG CORTES
+						<img src={barberPole} alt="Barber pole" />
+					</span>
+
+					<span>
+						Seg à sáb - 8 às 12h e <br />
+						14:30 às 18h
+					</span>
+				</BarberInfo>
+				<BarberFigure>
+
+				</BarberFigure>
+			</BarberInfoContainer>
+
 			<SocialMediasContainer>
 				<SocialMedia>
 					<img src={instagramIcon} alt="Instagram Icon" />
