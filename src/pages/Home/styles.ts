@@ -6,16 +6,81 @@ export const Container = styled.div`
 	flex-direction: column;
 `;
 
-export const BarberInfoContainer = styled.div``;
+export const BarberInfoContainer = styled.div`
+	font-family: 'Goldman', cursive;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 50px 20px;
+	flex-wrap: wrap;
+`;
 
-export const BarberInfo = styled.div``;
+export const BarberInfo = styled.div`
+	display: flex;
+	flex-direction: column;
+	animation: emergeleft 1s ease;
 
-export const BarberFigure = styled.figure``;
+	& span {
+		margin-bottom: 20px;
+	}
+
+	& span.barber-name {
+		max-width: 400px;
+		color: ${({ theme }) => theme.colors.red};
+		font-weight: bold;
+		font-size: 2rem;
+
+		& > img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	& span.barber-hour {
+		font-size: 1.3rem;
+		color: #828282;
+	}
+
+	@keyframes emergeleft {
+		0% {
+			transform: translateX(-50px);
+			opacity: 0%;
+		}
+
+		100% {
+			transform: translateX(0px);
+			opacity: 100%;
+		}
+	}
+`;
+
+export const BarberFigure = styled.figure`
+	max-width: 600px;
+	animation: emerge 1s ease;
+
+	& > img {
+		width: 100%;
+		border-radius: 10px;
+	}
+
+	@keyframes emerge {
+		0% {
+			transform: translateX(50px);
+			opacity: 0%;
+		}
+
+		100% {
+			transform: translateX(0px);
+			opacity: 100%;
+		}
+	}
+`;
 
 export const SocialMediasContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	padding: 20px;
 `;
 
 export const SocialMedia = styled.span`

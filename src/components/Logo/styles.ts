@@ -7,6 +7,7 @@ export const Container = styled.div`
 	font-family: 'Goldman', cursive;
 	color: white;
 	text-shadow: 2px 2px 8px #222;
+	user-select: none;
 
 	& span.red {
 		color: ${({ theme }) => theme.colors.red};

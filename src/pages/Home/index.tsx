@@ -2,24 +2,25 @@ import { BarberFigure, BarberInfo, BarberInfoContainer, Container, SocialMedia, 
 import instagramIcon from '../../assets/instagram.png';
 import whatsappIcon from '../../assets/whatsapp.png';
 import barberPole from '../../assets/barber.png';
+import barberImage from '../../assets/barber-image.png';
 
 export default function Home() {
 	return (
 		<Container>
 			<BarberInfoContainer>
 				<BarberInfo>
-					<span>
+					<span className="barber-name">
 						BARBEARIA BERG CORTES
 						<img src={barberPole} alt="Barber pole" />
 					</span>
 
-					<span>
+					<span className="barber-hour">
 						Seg à sáb - 8 às 12h e <br />
 						14:30 às 18h
 					</span>
 				</BarberInfo>
 				<BarberFigure>
-
+					<img src={barberImage} alt="Barber" />
 				</BarberFigure>
 			</BarberInfoContainer>
 
