@@ -12,6 +12,8 @@ const firebaseConfig = {
 	appId: import.meta.env.VITE_APP_ID,
 };
 
+self.FIREBASE_APPCHECK_DEBUG_TOKEN = '319692F0-2000-4044-B7C3-29C53CE3A196';
+
 export const app = initializeApp(firebaseConfig);
 
 export const appCheck = initializeAppCheck(app, {

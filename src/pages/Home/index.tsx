@@ -25,7 +25,7 @@ export default function Home() {
 			</BarberInfoContainer>
 
 			<SocialMediasContainer>
-				<SocialMedia>
+				<SocialMedia rel="noreferrer" target="_blank" href="https://www.instagram.com/devberg_">
 					<img src={instagramIcon} alt="Instagram Icon" />
 					@berg_du_corte
 				</SocialMedia>

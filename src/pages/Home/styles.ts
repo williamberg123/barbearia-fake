@@ -80,13 +80,17 @@ export const SocialMediasContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	padding: 20px;
 `;
 
-export const SocialMedia = styled.span`
+export const SocialMedia = styled.a`
 	display: flex;
 	align-items: center;
 	font-weight: bold;
+	margin: 20px 0;
+	text-decoration: none;
+	color: black;
 
 	& > img {
 		width: 50px;
