@@ -1,10 +1,19 @@
+import { useContext, useEffect } from 'react';
 import { BarberFigure, BarberInfo, BarberInfoContainer, Container, SocialMedia, SocialMediasContainer } from './styles';
 import instagramIcon from '../../assets/instagram.png';
 import whatsappIcon from '../../assets/whatsapp.png';
 import barberPole from '../../assets/barber.png';
 import barberImage from '../../assets/barber-image.png';
+import { AppContext } from '../../contexts/AppProvider';
+import { AppContextType } from '../../@types/appContext';
 
 export default function Home() {
+	const { changePage } = useContext(AppContext) as AppContextType;
+
+	useEffect(() => {
+		changePage('home');
+	}, []);
+
 	return (
 		<Container>
 			<BarberInfoContainer>

@@ -1,20 +1,25 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AppContextType } from '../../@types/appContext';
+import { AppContext } from '../../contexts/AppProvider';
 import { Nav, Navigation } from './styles';
 
-export default function MobileNavBar() {
+export default function MobileNavBar({ toggleMenu }: { toggleMenu: () => void }) {
+	const { page } = useContext(AppContext) as AppContextType;
+
 	return (
 		<Nav>
 			<Navigation>
 				<li>
-					<Link to="/">Home</Link>
+					<Link onClick={toggleMenu} className={page === 'home' ? 'page' : ''} to="/">Home</Link>
 				</li>
 
 				<li>
-					<Link to="/agendamento">Agendamento</Link>
+					<Link onClick={toggleMenu} className={page === 'schedule' ? 'page' : ''} to="/agendamento">Agendamento</Link>
 				</li>
 
 				<li>
-					<Link to="/servicos">Serviços</Link>
+					<Link onClick={toggleMenu} className={page === 'services' ? 'page' : ''} to="/servicos">Serviços</Link>
 				</li>
 			</Navigation>
 		</Nav>

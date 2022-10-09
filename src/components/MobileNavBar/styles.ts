@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
 	font-family: 'Georama', sans-serif;
-	position: absolute;
-	top: 81px;
-	left: 0;
 	width: 100%;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
 	z-index: 5;
 `;
 
@@ -17,6 +17,7 @@ export const Navigation = styled.ul`
 	flex-direction: column;
 	align-items: center;
 	background-color: ${({ theme }) => theme.colors.red};
+	position: absolute;
 
 	& li {
 		margin: 20px 0;

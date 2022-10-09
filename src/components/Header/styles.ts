@@ -12,11 +12,16 @@ export const Container = styled.header`
 	justify-content: space-around;
 	padding: 20px;
 	position: relative;
+	margin: 0 auto;
 
 	& > svg {
 		width: 30px;
 		height: 30px;
 		color: white;
+	}
+
+	& a.page {
+		border-bottom: 2px solid white;
 	}
 
 	@media (max-width: 800px) {

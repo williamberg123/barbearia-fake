@@ -4,6 +4,7 @@ export const Container = styled.div`
 	max-width: 1440px;
 	display: flex;
 	flex-direction: column;
+	margin: 0 auto;
 `;
 
 export const BarberInfoContainer = styled.div`
@@ -31,8 +32,10 @@ export const BarberInfo = styled.div`
 		font-size: 2rem;
 
 		& > img {
+			display: inline;
 			width: 40px;
 			height: 40px;
+			margin-bottom: -10px;
 		}
 	}
 
@@ -50,6 +53,12 @@ export const BarberInfo = styled.div`
 		100% {
 			transform: translateX(0px);
 			opacity: 100%;
+		}
+	}
+
+	@media (max-width: 1039px) {
+		& span.barber-name {
+			max-width: 100%;
 		}
 	}
 `;
