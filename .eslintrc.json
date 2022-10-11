@@ -72,6 +72,7 @@
 		"implicit-arrow-linebreak": "off",
 		"no-confusing-arrow": "off",
 		"no-restricted-globals": "off",
-		"no-nested-ternary": "off"
+		"no-nested-ternary": "off",
+		"jsx-a11y/control-has-associated-label": "off"
 	}
 }
