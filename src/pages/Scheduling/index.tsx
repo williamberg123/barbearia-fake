@@ -10,7 +10,7 @@ import { getDayClientsList } from '../../services/fbActions/getDayClientsList';
 import { CloseForm, Container, DarkBackground, Title } from './styles';
 
 export default function Scheduling() {
-	const [time, setTime] = useState<string>('0');
+	const [time, setTime] = useState<string>('');
 	const [isFormVisible, setIsFormVisible] = useState(false);
 	const { changePage } = useContext(AppContext) as AppContextType;
 
@@ -42,6 +42,7 @@ export default function Scheduling() {
 				isFormVisible && (
 					<>
 						<Form onSubmit={handleSubmit(onSubmit)}>
+							<input type="hidden" {...register('hour')} />
 							<h2>AGENDAMENTO</h2>
 							<span>Horário: {time} hrs</span>
 							<label htmlFor="client-name">

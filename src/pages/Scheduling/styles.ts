@@ -88,7 +88,7 @@ export const CloseForm = styled.div`
 	top: 40px;
 	right: 40px;
 	z-index: 5;
-	color: white;
+	color: #e5e5e5;
 
 	& svg {
 		width: 100%;

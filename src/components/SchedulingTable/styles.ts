@@ -25,6 +25,19 @@ export const Table = styled.table`
 		color: ${({ theme }) => theme.colors.red};
 	}
 
+	& td > button {
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		color: black;
+		border: 1px solid black;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
 	& th {
 		text-transform: uppercase;
 	}

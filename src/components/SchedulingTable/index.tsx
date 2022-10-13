@@ -1,3 +1,4 @@
+import TableItem from '../TableItem';
 import { Table } from './styles';
 
 // eslint-disable-next-line
@@ -15,39 +16,41 @@ export default function SchedulingTable({ addScheduling }: { addScheduling: (dat
 
 			<tbody>
 
-				<tr>
-					<td>8:00</td>
-					<td>José Edivar</td>
-					<td className={ false ? 'free-time' : 'closed-time' }>Agendado</td>
-					<td />
-				</tr>
-				<tr>
-					<td>8:20</td>
-					<td>-----</td>
-					<td className={ true ? 'free-time' : 'closed-time' }>Livre</td>
-					<td>
-						<button type="button" onClick={() => addScheduling('820')}>+</button>
-					</td>
-				</tr>
-				<tr>
-					<td>8:40</td>
-					<td>-----</td>
-					<td className={ true ? 'free-time' : 'closed-time' }>Livre</td>
-					<td>+</td>
-				</tr>
-				<tr>
-					<td>9:00</td>
-					<td>-----</td>
-					<td className={ true ? 'free-time' : 'closed-time' }>Livre</td>
-					<td>+</td>
-				</tr>
-				<tr>
-					<td>9:20</td>
-					<td>-----</td>
-					<td className={ true ? 'free-time' : 'closed-time' }>Livre</td>
-					<td>+</td>
-				</tr>
+				<TableItem
+					data={{
+						client_name: 'José Edivar',
+					}}
+					hour="8:00"
+					addScheduling={addScheduling}
+				/>
 
+				<TableItem
+					data={null}
+					hour="8:20"
+					addScheduling={addScheduling}
+				/>
+
+				<TableItem
+					data={{
+						client_name: 'William Berg',
+					}}
+					hour="8:40"
+					addScheduling={addScheduling}
+				/>
+
+				<TableItem
+					data={{
+						client_name: 'Paulo Henrique',
+					}}
+					hour="9:00"
+					addScheduling={addScheduling}
+				/>
+
+				<TableItem
+					data={null}
+					hour="9:20"
+					addScheduling={addScheduling}
+				/>
 			</tbody>
 		</Table>
 	);
