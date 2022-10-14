@@ -1,8 +1,7 @@
 import TableItem from '../TableItem';
 import { Table } from './styles';
 
-// eslint-disable-next-line
-export default function SchedulingTable({ addScheduling }: { addScheduling: (dateString: string) => void }) {
+export default function SchedulingTable() {
 	return (
 		<Table>
 			<thead>
@@ -17,39 +16,75 @@ export default function SchedulingTable({ addScheduling }: { addScheduling: (dat
 			<tbody>
 
 				<TableItem
-					data={{
-						client_name: 'José Edivar',
-					}}
 					hour="8:00"
-					addScheduling={addScheduling}
 				/>
 
 				<TableItem
-					data={null}
 					hour="8:20"
-					addScheduling={addScheduling}
 				/>
 
 				<TableItem
-					data={{
-						client_name: 'William Berg',
-					}}
 					hour="8:40"
-					addScheduling={addScheduling}
 				/>
 
 				<TableItem
-					data={{
-						client_name: 'Paulo Henrique',
-					}}
 					hour="9:00"
-					addScheduling={addScheduling}
 				/>
 
 				<TableItem
-					data={null}
 					hour="9:20"
-					addScheduling={addScheduling}
+				/>
+
+				<TableItem
+					hour="9:40"
+				/>
+
+				<TableItem
+					hour="10:00"
+				/>
+
+				<TableItem
+					hour="10:20"
+				/>
+
+				<TableItem
+					hour="10:40"
+				/>
+
+				<TableItem
+					hour="11:00"
+				/>
+
+				<TableItem
+					hour="11:20"
+				/>
+
+				<TableItem
+					hour="11:40"
+				/>
+
+				<TableItem
+					hour="12:00"
+				/>
+
+				<TableItem
+					hour="14:30"
+				/>
+
+				<TableItem
+					hour="14:50"
+				/>
+
+				<TableItem
+					hour="15:10"
+				/>
+
+				<TableItem
+					hour="15:30"
+				/>
+
+				<TableItem
+					hour="15:50"
 				/>
 			</tbody>
 		</Table>

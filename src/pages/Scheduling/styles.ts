@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 	& > form {
 		width: 500px;
-		position: absolute;
+		position: fixed;
 		top: 100px;
 		left: calc(50% - 250px);
 		display: flex;
@@ -38,7 +38,7 @@ export const Container = styled.div`
 			}
 		}
 
-			& input[type="submit"] {
+			& button[type="submit"] {
 				font-family: 'Goldman', cursive;
 				background-color: ${({ theme }) => theme.colors.red};
 				color: white;
@@ -74,7 +74,7 @@ export const DarkBackground = styled.div`
 	background-color: rgba(0, 0, 0, 0.6);
 	width: 100%;
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 3;
@@ -84,7 +84,7 @@ export const CloseForm = styled.div`
 	display: flex;
 	width: 50px;
 	height: 50px;
-	position: absolute;
+	position: fixed;
 	top: 40px;
 	right: 40px;
 	z-index: 5;

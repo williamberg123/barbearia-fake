@@ -1,7 +1,12 @@
-import { TableItemProps } from '../../@types/TableItem';
+import { useContext } from 'react';
+import { SchedulingPageContextType } from '../../@types/scheduling';
+import { SchedulingPageContext } from '../../contexts/SchedulingPageProvider';
 import { Tr } from './styles';
 
-export default function TableItem({ hour, data, addScheduling }: TableItemProps) {
+export default function TableItem({ hour }: { hour: string }) {
+	const { scheduling, handleClickAddScheduling } = useContext(SchedulingPageContext) as SchedulingPageContextType;
+	const data = scheduling?.find((item) => item.hour === hour);
+
 	return (
 		<Tr>
 			<td>{hour}</td>
@@ -22,7 +27,7 @@ export default function TableItem({ hour, data, addScheduling }: TableItemProps)
 			<td>
 				{
 					!data && (
-						<button type="button" onClick={() => addScheduling(hour)}>+</button>
+						<button type="button" onClick={() => handleClickAddScheduling(hour)}>+</button>
 					)
 				}
 			</td>

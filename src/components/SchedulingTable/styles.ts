@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Table = styled.table`
 	width: 900px;
-	margin: auto;
+	margin: 50px auto;
 	border-radius: 10px;
 	border-collapse: collapse;
 
@@ -32,10 +32,16 @@ export const Table = styled.table`
 		align-items: center;
 		justify-content: center;
 		font-weight: bold;
-		color: black;
-		border: 1px solid black;
+		background-color: white;
+		color: #00bc2f;
+		border: 1px solid #00bc2f;
 		border-radius: 50%;
 		cursor: pointer;
+
+		&:hover {
+			background-color: #00bc2f;
+			color: white;
+		}
 	}
 
 	& th {

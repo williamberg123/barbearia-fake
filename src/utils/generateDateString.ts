@@ -10,9 +10,7 @@ export const generateDateString = (days?: number) => {
 		date = new Date(t + (milliseconds_per_day * days));
 	}
 
-	const dayNumber = date.getDate();
-	const monthNumber = date.getMonth();
-	const yearNumber = date.getFullYear();
+	const formatedDate = date.toLocaleDateString('pt-BR').replaceAll('/', '');
 
-	return `${dayNumber}${monthNumber}${yearNumber}`;
+	return formatedDate;
 };

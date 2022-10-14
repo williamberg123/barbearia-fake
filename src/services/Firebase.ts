@@ -16,10 +16,11 @@ self.FIREBASE_APPCHECK_DEBUG_TOKEN = '8EBBD52F-7AE4-4577-AD96-F5A881A7E81F';
 
 export const app = initializeApp(firebaseConfig);
 
-export const appCheck = initializeAppCheck(app, {
+// eslint-disable-next-line
+const appCheck = initializeAppCheck(app, {
 	provider: new ReCaptchaV3Provider(import.meta.env.VITE_SITE_PUBLIC_KEY),
 	isTokenAutoRefreshEnabled: true,
 });
 
-export const db = getFirestore(app);
 export const auth = getAuth(app);
+export const db = getFirestore(app);
