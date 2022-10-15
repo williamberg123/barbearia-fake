@@ -13,5 +13,4 @@ export const Container = styled.div`
 	position: absolute;
 	right: 20px;
 	top: calc(50% - 20px);
-	text-align: center;
 `;
