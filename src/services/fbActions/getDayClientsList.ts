@@ -1,4 +1,4 @@
-import { getDocs, collection } from 'firebase/firestore';
+import { getDocs, collection, DocumentData } from 'firebase/firestore';
 import { SchedulingType } from '../../@types/scheduling';
 import { db } from '../Firebase';
 
@@ -8,7 +8,7 @@ export const getDayClientsList = async (dateString: string) => {
 
 	const array: SchedulingType[] = [];
 
-	document.forEach((item) => {
+	document.forEach((item: DocumentData) => {
 		array.push(item.data());
 	});
 
