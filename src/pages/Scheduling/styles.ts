@@ -52,6 +52,11 @@ export const Container = styled.div`
 			}
 	}
 
+	& > svg {
+		display: flex;
+		margin: 30px auto;
+	}
+
 	@media (max-width: 600px) {
 		& > form {
 			width: calc(100% - 40px);

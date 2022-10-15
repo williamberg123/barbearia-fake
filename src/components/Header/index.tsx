@@ -6,6 +6,7 @@ import Logo from '../Logo';
 import MobileNavBar from '../MobileNavBar';
 import NavBar from '../NavBar';
 import { Container } from './styles';
+import Profile from '../Profile';
 
 export default function Header() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,6 +25,7 @@ export default function Header() {
 	return (
 		<Container>
 			<Logo />
+
 			{
 				isMobile
 					? (
@@ -37,6 +39,8 @@ export default function Header() {
 			{
 				(isMobile && isMobileMenuOpen) && <MobileNavBar toggleMenu={toggleMenu} />
 			}
+
+			<Profile />
 		</Container>
 	);
 }

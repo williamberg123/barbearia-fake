@@ -15,6 +15,8 @@ export const Container = styled.header`
 	margin: 0 auto;
 
 	& > svg {
+		position: absolute;
+		right: 70px;
 		width: 30px;
 		height: 30px;
 		color: white;

@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { useForm, FieldValues } from 'react-hook-form';
 import { RiCloseCircleFill } from 'react-icons/ri';
+import { Vortex } from 'react-loader-spinner';
 
 import { AppContextType } from '../../@types/appContext';
 import { AppContext } from '../../contexts/AppProvider';
@@ -17,7 +18,7 @@ import { SchedulingPageContextType } from '../../@types/scheduling';
 
 export default function Scheduling() {
 	const { changePage } = useContext(AppContext) as AppContextType;
-	const { closeForm, isFormVisible, time } = useContext(SchedulingPageContext) as SchedulingPageContextType;
+	const { closeForm, isFormVisible, time, changeSelectedDay, scheduling } = useContext(SchedulingPageContext) as SchedulingPageContextType;
 
 	useEffect(() => {
 		changePage('schedule');
@@ -33,8 +34,14 @@ export default function Scheduling() {
 	return (
 		<Container>
 			<Title>Lista de agendamentos</Title>
-			<DateSelect formRegister={register('date_selection', { required: true })} />
-			<SchedulingTable />
+			<DateSelect formRegister={register('date_selection', { required: true, onChange: changeSelectedDay })} />
+
+			{
+				scheduling
+				? <SchedulingTable />
+				: <Vortex />
+			}
+
 			{
 				isFormVisible && (
 					<>
